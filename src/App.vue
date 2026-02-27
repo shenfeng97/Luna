@@ -94,6 +94,8 @@
                 <button class="action-link action-link-detail" @click="openDrawer(item)">详情</button>
                 <span class="action-divider"> | </span>
                 <button class="action-link action-link-play">播放</button>
+                <span class="action-divider"> | </span>
+                <button class="action-link action-link-test" @click="onTest(item)">测试</button>
               </td>
             </tr>
             </tbody>
@@ -465,6 +467,10 @@ function onReset() {
   projectKeyword.value = ''
   touchModeKeyword.value = ''
   filterVersion.value += 1
+}
+
+function onTest(row) {
+  window.alert(`测试按钮已点击，呼叫UID：${row.uid}`)
 }
 
 function openDrawer(row) {
@@ -851,6 +857,14 @@ function onTranslate() {
   color: #7b889c;
 }
 
+.action-link-test {
+  color: #f59e0b;
+}
+
+.action-link-test:hover {
+  color: #d97706;
+}
+
 .action-divider {
   color: #c0c8d2;
   font-size: 12px;
@@ -1044,7 +1058,7 @@ function onTranslate() {
 
 .info-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 8px;
   border-bottom: 1px solid #f3f5f8;
 }
