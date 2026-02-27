@@ -1044,7 +1044,7 @@ function onTranslate() {
 
 .info-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 8px;
   border-bottom: 1px solid #f3f5f8;
 }
