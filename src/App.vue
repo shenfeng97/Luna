@@ -91,8 +91,14 @@
               <td class="ellipsis-cell">{{ item.userName }}</td>
               <td>{{ formatPhone(item.phone) }}</td>
               <td>
-                <button class="action-link action-link-detail" @click="openDrawer(item)">详情</button>
-                <span class="action-divider"> | </span>
+                <button
+                  v-if="item.touchMode !== 'IVR'"
+                  class="action-link action-link-detail"
+                  @click="openDrawer(item)"
+                >
+                  详情
+                </button>
+                <span v-if="item.touchMode !== 'IVR'" class="action-divider"> | </span>
                 <button class="action-link action-link-play">播放</button>
               </td>
             </tr>
