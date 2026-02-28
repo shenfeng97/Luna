@@ -149,14 +149,6 @@
                 :key="i"
                 class="dialog-item"
               >
-                <div
-                  v-if="!line.noSpeech"
-                  class="dialog-time-row"
-                  :class="line.speaker === '用户' ? 'dialog-time-user' : 'dialog-time-agent'"
-                >
-                  {{ line.time }}
-                </div>
-
                 <!-- 左侧：AI -->
                 <div
                   v-if="line.speaker !== '用户' && !line.noSpeech"
@@ -1103,28 +1095,11 @@ function onTranslate() {
 }
 
 .dialog-item {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .dialog-item:last-child {
   margin-bottom: 0;
-}
-
-.dialog-time-row {
-  font-size: 11px;
-  color: #a0a7b4;
-  margin-bottom: 4px;
-  padding: 0 4px;
-}
-
-.dialog-time-agent {
-  text-align: left;
-  margin-left: 48px;
-}
-
-.dialog-time-user {
-  text-align: right;
-  margin-right: 48px;
 }
 
 .dialog-main {
@@ -1189,7 +1164,7 @@ function onTranslate() {
 
 .intent-tag {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 0;
   padding: 1px 8px;
   border-radius: 999px;
   background: var(--theme-color-soft);
@@ -1201,6 +1176,7 @@ function onTranslate() {
 .intent-row {
   margin-top: 4px;
   text-align: right;
+  margin-right: 48px;
 }
 
 .dialog-end-line {
