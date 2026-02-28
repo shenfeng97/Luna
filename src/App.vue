@@ -1174,7 +1174,7 @@ function onTranslate() {
 }
 
 .intent-row {
-  margin-top: 4px;
+  margin-top: 2px;
   text-align: right;
   margin-right: 48px;
 }
