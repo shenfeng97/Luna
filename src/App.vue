@@ -558,7 +558,6 @@ const currentInfoItems = computed(() => {
   const answerTime = isCallConnected(row) ? startCallTime : '--'
 
   return [
-    { label: '项目名称', value: basicInfo.项目名称 || '--' },
     { label: '任务名称', value: row.taskName || '--' },
     { label: '策略名称', value: row.strategy || '--' },
     { label: '策略类型', value: row.strategyType || '--' },
